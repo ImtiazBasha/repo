@@ -94,7 +94,7 @@ resource "aws_security_group" "apacheSg" {
     protocol         = "tcp"
     #cidr_blocks     = ["${chomp(data.http.myip.body)}/32"] 
     #cidr_blocks     = ["0.0.0.0/0"]
-    security_groups  = [aws_security_group.CICDSg.id]
+    security_groups  = [aws_security_group.BastionSg.id]
   }
 
   egress {
