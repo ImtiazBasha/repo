@@ -1,0 +1,25 @@
+pipeline{
+    agent any
+    stages{
+        stage("Git"){
+            steps{
+                echo "Hello Git"
+            }
+        }
+        stage("Maven"){
+            steps{
+                echo "Hello Mave"
+            }
+        }
+		stage("Sonarqube"){
+            steps{
+                echo "Hello Sonarqube"
+            }
+        }
+		stage("Deployment"){
+            steps{
+                echo "Hello Deployment"
+            }
+        }
+    }
+}
